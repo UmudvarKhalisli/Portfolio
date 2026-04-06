@@ -4,12 +4,13 @@ import { useMediaQuery } from '../hooks/useMediaQuery'
 
 export default function Contact({ contact }) {
   const isMobile = useMediaQuery('(max-width: 768px)')
-  const { email, linkedin, github, cv, text } = contact
+  const { email, linkedin, github, cv, text, whatsapp } = contact
 
   const links = [
     { label: email || 'Email', href: email ? `mailto:${email}` : null },
     { label: 'LinkedIn', href: linkedin || null },
     { label: 'GitHub', href: github || null },
+    { label: 'WhatsApp', href: whatsapp ? `https://wa.me/${whatsapp.replace(/\D/g, '')}` : null },
   ].filter(l => l.href)
 
   return (
