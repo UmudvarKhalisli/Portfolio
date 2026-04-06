@@ -122,8 +122,12 @@ const styles = {
   }
 }
 
+import { useMediaQuery } from '../hooks/useMediaQuery'
+
 export default function Navbar({ name, onAdminOpen }) {
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const [showModal, setShowModal] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
   const [clicks, setClicks] = useState(0)
   const lastClick = useRef(0)
 
@@ -145,26 +149,91 @@ export default function Navbar({ name, onAdminOpen }) {
 
   const scroll = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    setShowMenu(false)
+  }
+
+  const navStyle = {
+    ...styles.nav,
+    padding: isMobile ? '1rem 1.25rem' : '1.25rem 2.5rem',
+  }
+
+  const linksStyle = {
+    ...styles.links,
+    gap: isMobile ? '1rem' : '2rem',
+  }
+
+  const logoStyle = {
+    ...styles.logo,
+    fontSize: isMobile ? '1rem' : '1.1rem',
+  }
+
+  const templateBtnStyle = {
+    ...styles.templateBtn,
+    fontSize: isMobile ? '0.6rem' : '0.65rem',
+    padding: isMobile ? '0.35rem 0.6rem' : '0.45rem 0.9rem',
+  }
+
+  const mobileMenuStyle = {
+    position: 'fixed',
+    top: '4.5rem',
+    left: 0,
+    width: '100%',
+    background: '#fff',
+    borderBottom: '1px solid #e0e0e0',
+    display: showMenu ? 'flex' : 'none',
+    flexDirection: 'column',
+    padding: '2rem',
+    gap: '1.5rem',
+    zIndex: 99,
+    boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
   }
 
   return (
     <>
-      <nav style={styles.nav}>
-        <span style={styles.logo} onClick={handleLogoClick}>{name || 'Ad Soyad'}</span>
-        <div style={styles.links}>
-          <button style={styles.link} onClick={() => scroll('about')}>Haqqımda</button>
-          <button style={styles.link} onClick={() => scroll('projects')}>Layihələr</button>
-          <button style={styles.link} onClick={() => scroll('contact')}>Əlaqə</button>
+      <nav style={navStyle}>
+        <span style={logoStyle} onClick={handleLogoClick}>{name || 'Ad Soyad'}</span>
+        <div style={linksStyle}>
+          {!isMobile && (
+            <>
+              <button style={styles.link} onClick={() => scroll('about')}>Haqqımda</button>
+              <button style={styles.link} onClick={() => scroll('projects')}>Layihələr</button>
+              <button style={styles.link} onClick={() => scroll('contact')}>Əlaqə</button>
+            </>
+          )}
           <button 
-            style={styles.templateBtn} 
+            style={templateBtnStyle} 
             onClick={() => setShowModal(true)}
             onMouseEnter={e => { e.target.style.background = '#0a0a0a'; e.target.style.color = '#fff' }}
             onMouseLeave={e => { e.target.style.background = 'none'; e.target.style.color = '#0a0a0a' }}
           >
-            Bu şablonu istifadə et
+            {isMobile ? 'Şablon' : 'Bu şablonu istifadə et'}
           </button>
+          {isMobile && (
+            <button 
+              onClick={() => setShowMenu(!showMenu)}
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+            >
+              {showMenu ? (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
+                </svg>
+              ) : (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M4 8h16M4 16h16" strokeLinecap="round" />
+                </svg>
+              )}
+            </button>
+          )}
         </div>
       </nav>
+
+      {isMobile && (
+        <div style={mobileMenuStyle}>
+          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('about')}>Haqqımda</button>
+          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('projects')}>Layihələr</button>
+          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('contact')}>Əlaqə</button>
+        </div>
+      )}
 
       {showModal && (
         <div style={styles.modalOverlay} onClick={() => setShowModal(false)}>

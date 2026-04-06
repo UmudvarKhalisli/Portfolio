@@ -9,7 +9,7 @@ function ProjectCard({ project, index }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         border: `1px solid ${hovered ? '#0a0a0a' : '#e0e0e0'}`,
-        padding: '2rem',
+        padding: isMobile ? '1.5rem' : '2rem',
         transition: 'border-color 0.2s',
         cursor: 'default',
       }}
@@ -77,12 +77,19 @@ function ProjectCard({ project, index }) {
   )
 }
 
+import { useMediaQuery } from '../hooks/useMediaQuery'
+
 export default function Projects({ projects }) {
+  const isMobile = useMediaQuery('(max-width: 768px)')
   return (
-    <section id="projects" style={{ padding: '5rem 2.5rem', maxWidth: 960, margin: '0 auto' }}>
+    <section id="projects" style={{ 
+      padding: isMobile ? '3rem 1.5rem' : '5rem 2.5rem', 
+      maxWidth: 960, 
+      margin: '0 auto' 
+    }}>
       <div style={{
         fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase',
-        color: '#888', marginBottom: '3rem',
+        color: '#888', marginBottom: isMobile ? '1.5rem' : '3rem',
       }}>
         — Layihələr
       </div>
@@ -95,7 +102,7 @@ export default function Projects({ projects }) {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '1.5rem',
+          gap: isMobile ? '1rem' : '1.5rem',
         }}>
           {projects.map((p, i) => (
             <ProjectCard key={i} project={p} index={i} />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 
 const ADMIN_PASSWORD = 'umudvar2026umudvar'
 
@@ -96,7 +97,11 @@ function ProfileTab({ profile, onSave }) {
           <Input label="Profil şəkli URL" value={form.imgUrl} onChange={set('imgUrl')} />
         </div>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', 
+        gap: '1rem' 
+      }}>
         <Input label="Ad Soyad" value={form.name} onChange={set('name')} />
         <Input label="Vəzifə / Rol" value={form.role} onChange={set('role')} />
       </div>
@@ -344,6 +349,7 @@ function ContactTab({ contact, onSave }) {
 }
 
 export default function AdminPanel({ data, onUpdateProfile, onUpdateProjects, onUpdateContact, onClose }) {
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const [tab, setTab] = useState('profile')
   const [toast, setToast] = useState('')
   const [loggedIn, setLoggedIn] = useState(false)
@@ -418,8 +424,17 @@ export default function AdminPanel({ data, onUpdateProfile, onUpdateProjects, on
         <button onClick={onClose} style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', color: '#0a0a0a', lineHeight: 1 }}>×</button>
       </div>
 
-      <div style={{ maxWidth: 760, margin: '0 auto', padding: '2rem' }}>
-        <div style={{ display: 'flex', borderBottom: '1px solid #e0e0e0', marginBottom: '2rem' }}>
+      <div style={{ 
+        maxWidth: 760, 
+        margin: '0 auto', 
+        padding: isMobile ? '1.5rem 1rem' : '2rem' 
+      }}>
+        <div style={{ 
+          display: 'flex', 
+          flexWrap: 'wrap',
+          borderBottom: '1px solid #e0e0e0', 
+          marginBottom: '2rem' 
+        }}>
           <button style={tabStyle(tab === 'profile')} onClick={() => setTab('profile')}>Profil</button>
           <button style={tabStyle(tab === 'projects')} onClick={() => setTab('projects')}>Layihələr</button>
           <button style={tabStyle(tab === 'contact')} onClick={() => setTab('contact')}>Əlaqə & CV</button>

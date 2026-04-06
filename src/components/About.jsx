@@ -1,20 +1,27 @@
 import React from 'react'
 
+import { useMediaQuery } from '../hooks/useMediaQuery'
+
 export default function About({ profile }) {
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const { about, skills, imgUrl, name } = profile
 
   const skillLines = (skills || '').split('\n').filter(Boolean).map(line => {
     const [skill, level] = line.split('|')
-    return { skill: (skill || '').trim(), level: (level || '').trim() }
+    return { skill: skill.trim(), level: level.trim() }
   })
 
   const initials = (name || 'AD').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2)
 
   return (
-    <section id="about" style={{ padding: '5rem 2.5rem', maxWidth: 960, margin: '0 auto' }}>
+    <section id="about" style={{ 
+      padding: isMobile ? '3rem 1.5rem' : '5rem 2.5rem', 
+      maxWidth: 960, 
+      margin: '0 auto' 
+    }}>
       <div style={{
         fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase',
-        color: '#888', marginBottom: '3rem',
+        color: '#888', marginBottom: isMobile ? '1.5rem' : '3rem',
       }}>
         — Haqqımda
       </div>
@@ -22,7 +29,7 @@ export default function About({ profile }) {
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '4rem',
+        gap: isMobile ? '2rem' : '4rem',
         alignItems: 'start',
       }}>
         <div>

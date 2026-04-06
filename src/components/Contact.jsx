@@ -1,6 +1,9 @@
 import React from 'react'
 
+import { useMediaQuery } from '../hooks/useMediaQuery'
+
 export default function Contact({ contact }) {
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const { email, linkedin, github, cv, text } = contact
 
   const links = [
@@ -14,13 +17,13 @@ export default function Contact({ contact }) {
       {cv && (
         <div style={{
           textAlign: 'center',
-          padding: '4rem 2.5rem',
+          padding: isMobile ? '3rem 1.5rem' : '4rem 2.5rem',
           borderTop: '1px solid #e0e0e0',
           borderBottom: '1px solid #e0e0e0',
         }}>
           <h3 style={{
             fontFamily: "'EB Garamond', serif", fontWeight: 400,
-            fontSize: '2rem', marginBottom: '0.75rem',
+            fontSize: isMobile ? '1.5rem' : '2rem', marginBottom: '0.75rem',
           }}>
             CV-ni yüklə
           </h3>
@@ -35,7 +38,7 @@ export default function Contact({ contact }) {
             target="_blank"
             rel="noreferrer"
             style={{
-              display: 'inline-block', padding: '0.85rem 2.5rem',
+              display: 'inline-block', padding: isMobile ? '0.75rem 1.75rem' : '0.85rem 2.5rem',
               background: '#0a0a0a', color: '#fafafa',
               textDecoration: 'none', fontSize: '0.78rem',
               letterSpacing: '0.1em', textTransform: 'uppercase',
@@ -49,10 +52,14 @@ export default function Contact({ contact }) {
         </div>
       )}
 
-      <section id="contact" style={{ padding: '5rem 2.5rem', maxWidth: 960, margin: '0 auto' }}>
+      <section id="contact" style={{ 
+        padding: isMobile ? '3rem 1.5rem' : '5rem 2.5rem', 
+        maxWidth: 960, 
+        margin: '0 auto' 
+      }}>
         <div style={{
           fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase',
-          color: '#888', marginBottom: '3rem',
+          color: '#888', marginBottom: isMobile ? '1.5rem' : '3rem',
         }}>
           — Əlaqə
         </div>
@@ -60,7 +67,7 @@ export default function Contact({ contact }) {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '4rem',
+          gap: isMobile ? '2rem' : '4rem',
         }}>
           <p style={{
             fontSize: '1rem', lineHeight: 1.8, color: '#444',

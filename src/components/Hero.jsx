@@ -1,6 +1,9 @@
 import React from 'react'
 
+import { useMediaQuery } from '../hooks/useMediaQuery'
+
 export default function Hero({ profile }) {
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const { name, role, bio } = profile
 
   const scroll = (id) => {
@@ -8,7 +11,11 @@ export default function Hero({ profile }) {
   }
 
   return (
-    <section style={{ padding: '8rem 2.5rem 5rem', maxWidth: 960, margin: '0 auto' }}>
+    <section style={{ 
+      padding: isMobile ? '4rem 1.5rem 3rem' : '8rem 2.5rem 5rem', 
+      maxWidth: 960, 
+      margin: '0 auto' 
+    }}>
       <div style={{
         fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase',
         color: '#888', fontFamily: 'DM Sans, sans-serif', marginBottom: '1.5rem'
