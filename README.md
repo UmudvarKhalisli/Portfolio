@@ -19,7 +19,7 @@ Brauzerdə `http://localhost:5173` ünvanını açın.
 
 Saytda naviqasiya çubuğundakı **⚙** düyməsinə basın.
 
-Şifrə: `portfolio2026`
+Şifrə: `umudvar2026umudvar`
 
 > **Qeyd:** Şifrəni `src/components/AdminPanel.jsx` faylında `ADMIN_PASSWORD` sabitini dəyişərək yeniləyə bilərsiniz.
 
