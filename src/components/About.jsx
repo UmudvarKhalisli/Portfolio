@@ -80,9 +80,6 @@ export default function About({ profile }) {
                 fontSize: '0.9rem', fontFamily: 'DM Sans, sans-serif',
               }}>
                 <span>{s.skill}</span>
-                <span style={{ fontSize: '0.72rem', color: '#888', letterSpacing: '0.05em' }}>
-                  {s.level}
-                </span>
               </li>
             ))}
           </ul>
