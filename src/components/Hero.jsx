@@ -13,7 +13,7 @@ export default function Hero({ profile }) {
   const roleText = (
     <div style={{
       fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase',
-      color: 'var(--gray)', fontFamily: 'DM Sans, sans-serif', marginBottom: '1rem'
+      color: '#888', fontFamily: 'DM Sans, sans-serif', marginBottom: '1rem'
     }}>
       {role || 'Frontend Developer'}
     </div>
@@ -27,7 +27,7 @@ export default function Hero({ profile }) {
       lineHeight: 1.0,
       letterSpacing: '-1px',
       marginBottom: isMobile ? '0' : '2rem',
-      color: 'var(--black)',
+      color: '#0a0a0a',
     }}>
       {name ? name.split(' ').map((w, i) => (
         <span key={i} style={{ display: 'block' }}>{w}</span>
@@ -37,7 +37,7 @@ export default function Hero({ profile }) {
 
   const bioText = (
     <p style={{
-      fontSize: '0.95rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.75,
+      fontSize: '0.95rem', color: '#666', lineHeight: 1.75,
       maxWidth: 480, marginBottom: '2.5rem',
       fontFamily: 'DM Sans, sans-serif',
       marginTop: isMobile ? '1.5rem' : '0'
@@ -52,17 +52,17 @@ export default function Hero({ profile }) {
         onClick={() => scroll('projects')}
         style={{
           padding: '0.75rem 2rem',
-          border: '1px solid var(--black)',
-          background: 'var(--black)',
-          color: 'var(--white)',
+          border: '1px solid #0a0a0a',
+          background: '#0a0a0a',
+          color: '#fafafa',
           fontSize: '0.78rem',
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
           cursor: 'pointer',
           transition: 'all 0.2s',
         }}
-        onMouseEnter={e => { e.target.style.background = 'rgba(255,255,255,0.8)' }}
-        onMouseLeave={e => { e.target.style.background = 'var(--black)' }}
+        onMouseEnter={e => { e.target.style.background = '#333' }}
+        onMouseLeave={e => { e.target.style.background = '#0a0a0a' }}
       >
         Layihələrim
       </button>
@@ -70,17 +70,17 @@ export default function Hero({ profile }) {
         onClick={() => scroll('contact')}
         style={{
           padding: '0.75rem 2rem',
-          border: '1px solid var(--border)',
+          border: '1px solid #e0e0e0',
           background: 'transparent',
-          color: 'var(--black)',
+          color: '#0a0a0a',
           fontSize: '0.78rem',
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
           cursor: 'pointer',
           transition: 'all 0.2s',
         }}
-        onMouseEnter={e => { e.target.style.borderColor = 'var(--black)' }}
-        onMouseLeave={e => { e.target.style.borderColor = 'var(--border)' }}
+        onMouseEnter={e => { e.target.style.borderColor = '#0a0a0a' }}
+        onMouseLeave={e => { e.target.style.borderColor = '#e0e0e0' }}
       >
         Əlaqə
       </button>

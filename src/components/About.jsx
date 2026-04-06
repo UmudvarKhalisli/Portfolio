@@ -24,7 +24,7 @@ export default function About({ profile }) {
     }}>
       <div style={{
         fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase',
-        color: 'var(--gray)', marginBottom: isMobile ? '1.5rem' : '3rem',
+        color: '#888', marginBottom: isMobile ? '1.5rem' : '3rem',
       }}>
         — Haqqımda
       </div>
@@ -37,7 +37,7 @@ export default function About({ profile }) {
       }}>
         <div>
           <p style={{
-            fontSize: '1rem', lineHeight: 1.85, color: 'rgba(255,255,255,0.7)',
+            fontSize: '1rem', lineHeight: 1.85, color: '#444',
             fontFamily: 'DM Sans, sans-serif',
           }}>
             {about || 'Admin paneldən haqqınızda məlumat əlavə edin.'}
@@ -47,7 +47,7 @@ export default function About({ profile }) {
         <div>
           <div style={{
             fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase',
-            color: 'var(--gray)', marginBottom: '1.25rem',
+            color: '#888', marginBottom: '1.25rem',
           }}>
             Bacarıqlar
           </div>
@@ -55,7 +55,7 @@ export default function About({ profile }) {
             {skillLines.map((s, i) => (
               <li key={i} style={{
                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                padding: '0.75rem 0', borderBottom: '1px solid var(--border)',
+                padding: '0.75rem 0', borderBottom: '1px solid #e0e0e0',
                 fontSize: '0.9rem', fontFamily: 'DM Sans, sans-serif',
               }}>
                 <span>{s.skill}</span>

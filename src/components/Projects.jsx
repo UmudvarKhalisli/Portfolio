@@ -8,11 +8,10 @@ function ProjectCard({ project, index, isMobile }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        border: `1px solid ${hovered ? 'var(--black)' : 'var(--border)'}`,
+        border: `1px solid ${hovered ? '#0a0a0a' : '#e0e0e0'}`,
         padding: isMobile ? '1.5rem' : '2rem',
-        transition: 'all 0.2s',
+        transition: 'border-color 0.2s',
         cursor: 'default',
-        background: hovered ? 'rgba(255,255,255,0.03)' : 'transparent',
       }}
     >
       <div style={{
@@ -28,7 +27,7 @@ function ProjectCard({ project, index, isMobile }) {
         {project.title}
       </h3>
       <p style={{
-        fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
+        fontSize: '0.85rem', color: '#666', lineHeight: 1.65,
         fontFamily: 'DM Sans, sans-serif', marginBottom: '1.5rem',
       }}>
         {project.desc}
@@ -37,7 +36,7 @@ function ProjectCard({ project, index, isMobile }) {
         {(project.tags || []).map((tag, i) => (
           <span key={i} style={{
             fontSize: '0.68rem', padding: '0.3rem 0.75rem',
-            border: '1px solid var(--border)', color: 'var(--gray)',
+            border: '1px solid #e0e0e0', color: '#888',
             fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em',
           }}>
             {tag}
@@ -53,7 +52,7 @@ function ProjectCard({ project, index, isMobile }) {
             style={{
               fontSize: '0.75rem', letterSpacing: '0.08em', textTransform: 'uppercase',
               fontFamily: 'DM Sans, sans-serif', textDecoration: 'none',
-              color: 'var(--black)', borderBottom: '1px solid var(--black)', paddingBottom: '1px',
+              color: '#0a0a0a', borderBottom: '1px solid #0a0a0a', paddingBottom: '1px',
             }}
           >
             Demo →
@@ -67,7 +66,7 @@ function ProjectCard({ project, index, isMobile }) {
             style={{
               fontSize: '0.75rem', letterSpacing: '0.08em', textTransform: 'uppercase',
               fontFamily: 'DM Sans, sans-serif', textDecoration: 'none',
-              color: 'var(--gray)', borderBottom: '1px solid var(--gray)', paddingBottom: '1px',
+              color: '#888', borderBottom: '1px solid #ccc', paddingBottom: '1px',
             }}
           >
             GitHub →

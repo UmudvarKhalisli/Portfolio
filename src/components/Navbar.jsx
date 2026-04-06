@@ -6,11 +6,11 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '1.25rem 2.5rem',
-    borderBottom: '1px solid var(--border)',
+    borderBottom: '1px solid #e0e0e0',
     position: 'sticky',
     top: 0,
-    background: 'rgba(5,5,5,0.8)',
-    backdropFilter: 'blur(12px)',
+    background: 'rgba(250,250,250,0.96)',
+    backdropFilter: 'blur(8px)',
     zIndex: 100,
   },
   logo: {
@@ -19,7 +19,7 @@ const styles = {
     fontWeight: 400,
     letterSpacing: '-0.3px',
     textDecoration: 'none',
-    color: 'var(--black)',
+    color: '#0a0a0a',
     cursor: 'pointer',
     userSelect: 'none',
   },
@@ -45,10 +45,10 @@ const styles = {
     fontSize: '0.65rem',
     letterSpacing: '0.1em',
     textTransform: 'uppercase',
-    color: 'var(--black)',
+    color: '#0a0a0a',
     cursor: 'pointer',
     background: 'none',
-    border: '1px solid var(--black)',
+    border: '1px solid #0a0a0a',
     padding: '0.45rem 0.9rem',
     fontFamily: 'DM Sans, sans-serif',
     borderRadius: 0,
@@ -57,8 +57,8 @@ const styles = {
   modalOverlay: {
     position: 'fixed',
     inset: 0,
-    background: 'rgba(0,0,0,0.8)',
-    backdropFilter: 'blur(8px)',
+    background: 'rgba(255,255,255,0.9)',
+    backdropFilter: 'blur(4px)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -66,15 +66,15 @@ const styles = {
     padding: '2rem',
   },
   modal: {
-    background: '#111',
-    border: '1px solid var(--border)',
+    background: '#fff',
+    border: '1px solid #0a0a0a',
     maxWidth: '440px',
     width: '100%',
     padding: '2.5rem',
     position: 'relative',
     textAlign: 'center',
     borderRadius: 0,
-    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+    boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
   },
   closeBtn: {
     position: 'absolute',
@@ -224,11 +224,11 @@ export default function Navbar({ name, onAdminOpen }) {
               }}
             >
               {showMenu ? (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" strokeWidth="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="1.5">
                   <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
                 </svg>
               ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" strokeWidth="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="1.5">
                   <path d="M4 8h16M4 16h16" strokeLinecap="round" />
                 </svg>
               )}

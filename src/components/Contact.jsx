@@ -18,10 +18,10 @@ const Icon = ({ path, label, href }) => {
         width: '3.5rem',
         height: '3.5rem',
         borderRadius: '50%',
-        background: hover ? 'rgba(255,255,255,0.1)' : 'transparent',
-        border: '1px solid var(--border)',
+        background: hover ? 'rgba(0,0,0,0.05)' : 'transparent',
+        border: '1px solid #e0e0e0',
         transition: 'all 0.3s ease',
-        color: 'var(--black)',
+        color: '#0a0a0a',
         textDecoration: 'none',
       }}
       title={label}
@@ -67,18 +67,17 @@ export default function Contact({ contact }) {
         <div style={{
           textAlign: 'center',
           padding: isMobile ? '3rem 1.5rem' : '4rem 2.5rem',
-          borderTop: '1px solid var(--border)',
-          borderBottom: '1px solid var(--border)',
+          borderTop: '1px solid #e0e0e0',
+          borderBottom: '1px solid #e0e0e0',
         }}>
           <h3 style={{
             fontFamily: "'EB Garamond', serif", fontWeight: 400,
             fontSize: isMobile ? '1.5rem' : '2rem', marginBottom: '0.75rem',
-            color: 'var(--black)',
           }}>
             CV-ni yüklə
           </h3>
           <p style={{
-            color: 'var(--gray)', fontFamily: 'DM Sans, sans-serif',
+            color: '#888', fontFamily: 'DM Sans, sans-serif',
             fontSize: '0.9rem', marginBottom: '2rem',
           }}>
             Tam tərcümeyi-halımı PDF formatında əldə edin.
@@ -89,7 +88,7 @@ export default function Contact({ contact }) {
             rel="noreferrer"
             style={{
               display: 'inline-block', padding: isMobile ? '0.75rem 1.75rem' : '0.85rem 2.5rem',
-              background: 'var(--black)', color: 'var(--white)',
+              background: '#0a0a0a', color: '#fafafa',
               textDecoration: 'none', fontSize: '0.78rem',
               letterSpacing: '0.1em', textTransform: 'uppercase',
               fontFamily: 'DM Sans, sans-serif', transition: 'opacity 0.2s',
@@ -109,7 +108,7 @@ export default function Contact({ contact }) {
       }}>
         <div style={{
           fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase',
-          color: 'var(--gray)', marginBottom: isMobile ? '1.5rem' : '3rem',
+          color: '#888', marginBottom: isMobile ? '1.5rem' : '3rem',
         }}>
           — Əlaqə
         </div>
@@ -120,7 +119,7 @@ export default function Contact({ contact }) {
           gap: isMobile ? '2rem' : '3rem',
         }}>
           <p style={{
-            fontSize: '1.1rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)',
+            fontSize: '1.1rem', lineHeight: 1.8, color: '#444',
             fontFamily: 'DM Sans, sans-serif', maxWidth: 600
           }}>
             {text || 'Müsahibə və ya əməkdaşlıq üçün əlaqə saxlayın.'}
