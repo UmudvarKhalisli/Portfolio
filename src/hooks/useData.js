@@ -5,8 +5,8 @@ const DEFAULT_DATA = {
     "name": "Ümüdvar Xalisli",
     "role": "Full-Stack Developer ",
     "bio": "İstifadə rahatlığı, inkişaf və icraya fokuslanaraq real platformalar, marketplace sistemləri və rəqəmsal alətlər yaradan developer və məhsul qurucusu.",
-    "about": "Mən web development sahəsində çalışan və müasir, funksional rəqəmsal məhsullar hazırlamağa fokuslanan bir developerəm. HTML, CSS, JavaScript, PHP, SQL/MySQL, React və Next.js ilə işləyir, təmiz kod strukturu, məntiqli sistem quruluşu və rahat istifadəçi təcrübəsinə önəm verirəm. Məqsədim yalnız işləyən layihələr yaratmaq deyil, eyni zamanda inkişaf etdirilə bilən, praktik və peşəkar həllər qurmaqdır.",
-    "skills": "HTML, CSS, JavaScript, \nPHP, SQL/MySQL, React, \nNext.js, Responsive Design, \nAPI Integration, Git, GitHub, \nCRUD, Database Management, \nProblem Solving.",
+    "about": "Mən web development sahəsində çalışan və müasir, funksional rəqəmsal məhsullar hazırlamağa fokuslanan bir developerəm. HTML, CSS, JavaScript, PHP, SQL/MySQL, React və Next.js ilə işləyir, təmiz kod strukturu, məntiqli sistem quruluşu və rahat istifadəçi təcrübəsinə önəm verirəm. Həmçinin, süni intellekt (AI) alətləri ilə effektiv işləmə, prompt engineering və iş axınlarını AI vasitəsilə optimallaşdırma bacarıqlarına malikəm. Məqsədim yalnız işləyən layihələr yaratmaq deyil, eyni zamanda inkişaf etdirilə bilən, praktik və peşəkar həllər qurmaqdır.",
+    "skills": "HTML, CSS, JavaScript, \nPHP, SQL/MySQL, React, \nNext.js, Responsive Design, \nAPI Integration, Git, GitHub, \nCRUD, Database Management, \nProblem Solving, AI ilə işləmə | Yaxşı.",
     "imgUrl": "https://image2url.com/r2/default/images/1775394886525-c3e9696c-3821-4486-a179-db6c1f94f459.jpg"
   },
   "projects": [
