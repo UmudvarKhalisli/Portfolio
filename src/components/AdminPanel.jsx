@@ -14,7 +14,7 @@ function Toast({ message, onHide }) {
       background: '#0a0a0a', color: '#fafafa',
       padding: '0.75rem 1.5rem', zIndex: 9999,
       fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem',
-      letterSpacing: '0.03em', pointerEvents: 'none',
+      letterSpacing: '0.03em', pointerEvents: 'none', borderRadius: 0,
     }}>
       {message}
     </div>
@@ -66,6 +66,7 @@ function SaveBtn({ onClick, label = 'Saxla' }) {
         background: '#0a0a0a', color: '#fafafa', border: 'none',
         fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase',
         fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', transition: 'opacity 0.2s',
+        borderRadius: 0,
       }}
       onMouseEnter={e => e.target.style.opacity = '0.8'}
       onMouseLeave={e => e.target.style.opacity = '1'}
@@ -161,7 +162,7 @@ function ProjectsTab({ projects, onSave, onShowToast }) {
         <Input label="GitHub URL" value={form.github} onChange={set('github')} />
         <div style={{ display: 'flex', gap: '1rem' }}>
           <SaveBtn onClick={saveProject} />
-          <button onClick={() => setEditing(null)} style={{ flex: 0.5, padding: '0.9rem', border: '1px solid #e0e0e0', background: 'none', cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+          <button onClick={() => setEditing(null)} style={{ flex: 0.5, padding: '0.9rem', border: '1px solid #e0e0e0', background: 'none', cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: 0 }}>
             Bağla
           </button>
         </div>
@@ -177,6 +178,7 @@ function ProjectsTab({ projects, onSave, onShowToast }) {
           width: '100%', padding: '1rem', border: '1px dashed #ccc', background: 'none',
           fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', color: '#888',
           cursor: 'pointer', marginBottom: '1.5rem', transition: 'all 0.2s',
+          borderRadius: 0,
         }}
         onMouseEnter={e => { e.target.style.borderColor = '#0a0a0a'; e.target.style.color = '#0a0a0a' }}
         onMouseLeave={e => { e.target.style.borderColor = '#ccc'; e.target.style.color = '#888' }}
@@ -194,17 +196,132 @@ function ProjectsTab({ projects, onSave, onShowToast }) {
         <div key={i} style={{ border: '1px solid #e0e0e0', padding: '1.25rem', marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 500 }}>{p.title}</span>
           <div style={{ display: 'flex', gap: '0.75rem' }}>
-            <button onClick={() => openEdit(i)} style={{ fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', padding: '0.4rem 0.9rem', border: '1px solid #e0e0e0', background: 'none', color: '#0a0a0a', transition: 'all 0.2s' }}
+            <button onClick={() => openEdit(i)} style={{ fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', padding: '0.4rem 0.9rem', border: '1px solid #e0e0e0', background: 'none', color: '#0a0a0a', transition: 'all 0.2s', borderRadius: 0 }}
               onMouseEnter={e => { e.target.style.background = '#0a0a0a'; e.target.style.color = '#fff' }}
               onMouseLeave={e => { e.target.style.background = 'none'; e.target.style.color = '#0a0a0a' }}
             >Redaktə</button>
-            <button onClick={() => del(i)} style={{ fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', padding: '0.4rem 0.9rem', border: '1px solid #ddd', background: 'none', color: '#aaa', transition: 'all 0.2s' }}
+            <button onClick={() => del(i)} style={{ fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', padding: '0.4rem 0.9rem', border: '1px solid #ddd', background: 'none', color: '#aaa', transition: 'all 0.2s', borderRadius: 0 }}
               onMouseEnter={e => { e.target.style.color = '#0a0a0a'; e.target.style.borderColor = '#999' }}
               onMouseLeave={e => { e.target.style.color = '#aaa'; e.target.style.borderColor = '#ddd' }}
             >Sil</button>
           </div>
         </div>
       ))}
+    </div>
+  )
+}
+
+function ExportTab({ data }) {
+  const [copied, setCopied] = useState(false)
+
+  const generateCode = () => {
+    const d = JSON.stringify(data, null, 2)
+    return `const DEFAULT_DATA = ${d}\n`
+  }
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generateCode()).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    })
+  }
+
+  const handleDownload = () => {
+    const code = `import { useState } from 'react'
+
+${generateCode()}
+const STORAGE_KEY = 'portfolio_data_v1'
+
+export function useData() {
+  const [data, setData] = useState(() => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY)
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        return { ...DEFAULT_DATA, ...parsed }
+      }
+    } catch (_) {}
+    return DEFAULT_DATA
+  })
+
+  const updateData = (newData) => {
+    setData(newData)
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(newData))
+    } catch (_) {}
+  }
+
+  const updateProfile = (profile) => updateData({ ...data, profile })
+  const updateProjects = (projects) => updateData({ ...data, projects })
+  const updateContact = (contact) => updateData({ ...data, contact })
+
+  return { data, updateProfile, updateProjects, updateContact }
+}
+`
+    const blob = new Blob([code], { type: 'text/javascript' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'useData.js'
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
+  return (
+    <div>
+      <div style={{ background: '#f7f7f7', border: '1px solid #e0e0e0', padding: '1.5rem', marginBottom: '1.5rem' }}>
+        <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', lineHeight: 1.7, color: '#444', marginBottom: '1rem' }}>
+          Bütün məlumatlarını doldurduqdan sonra aşağıdakı düymələrdən birini istifadə et:
+        </p>
+        <ul style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', color: '#555', lineHeight: 2, paddingLeft: '1.25rem', listStyle: 'none' }}>
+          <li>• <strong>"useData.js yüklə"</strong> düyməsinə bas</li>
+          <li>• Faylı <code style={{ background: '#eee', padding: '1px 6px', fontSize: '0.8rem' }}>src/hooks/useData.js</code> üzərinə yapışdır</li>
+          <li>• <code style={{ background: '#eee', padding: '1px 6px', fontSize: '0.8rem' }}>git add . && git commit -m "update data" && git push</code></li>
+          <li>• Vercel avtomatik yenilənir ✓</li>
+        </ul>
+      </div>
+
+      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
+        <button
+          onClick={handleDownload}
+          style={{
+            flex: 1, padding: '1rem', background: '#0a0a0a', color: '#fafafa', border: 'none',
+            fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase',
+            fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', borderRadius: 0,
+          }}
+          onMouseEnter={e => e.target.style.opacity = '0.8'}
+          onMouseLeave={e => e.target.style.opacity = '1'}
+        >
+          ↓ useData.js yüklə
+        </button>
+        <button
+          onClick={handleCopy}
+          style={{
+            flex: 1, padding: '1rem', background: copied ? '#2a7a2a' : 'transparent',
+            color: copied ? '#fff' : '#0a0a0a',
+            border: '1px solid #e0e0e0',
+            fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase',
+            fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', transition: 'all 0.3s',
+            borderRadius: 0,
+          }}
+        >
+          {copied ? '✓ Kopyalandı!' : 'DEFAULT_DATA kopyala'}
+        </button>
+      </div>
+
+      <div style={{ border: '1px solid #e0e0e0' }}>
+        <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #e0e0e0', background: '#f7f7f7', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: '#888', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Önizləmə</span>
+        </div>
+        <pre style={{
+          padding: '1rem', overflowX: 'auto', fontSize: '0.72rem',
+          fontFamily: 'monospace', lineHeight: 1.6, color: '#444',
+          maxHeight: 300, overflowY: 'auto', margin: 0,
+          background: '#fafafa',
+        }}>
+          {generateCode()}
+        </pre>
+      </div>
     </div>
   )
 }
@@ -276,7 +393,7 @@ export default function AdminPanel({ data, onUpdateProfile, onUpdateProjects, on
               if (passVal === ADMIN_PASSWORD) setLoggedIn(true)
               else setPassErr(true)
             }}
-            style={{ width: '100%', padding: '0.9rem', background: '#0a0a0a', color: '#fafafa', border: 'none', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', cursor: 'pointer' }}
+            style={{ width: '100%', padding: '0.9rem', background: '#0a0a0a', color: '#fafafa', border: 'none', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', cursor: 'pointer', borderRadius: 0 }}
           >
             Daxil ol
           </button>
@@ -306,8 +423,10 @@ export default function AdminPanel({ data, onUpdateProfile, onUpdateProjects, on
           <button style={tabStyle(tab === 'profile')} onClick={() => setTab('profile')}>Profil</button>
           <button style={tabStyle(tab === 'projects')} onClick={() => setTab('projects')}>Layihələr</button>
           <button style={tabStyle(tab === 'contact')} onClick={() => setTab('contact')}>Əlaqə & CV</button>
+          <button style={tabStyle(tab === 'export')} onClick={() => setTab('export')}>Export</button>
         </div>
 
+        {tab === 'export' && <ExportTab data={data} />}
         {tab === 'profile' && (
           <ProfileTab profile={data.profile} onSave={(p) => { onUpdateProfile(p); showToast('Profil saxlanıldı') }} />
         )}
