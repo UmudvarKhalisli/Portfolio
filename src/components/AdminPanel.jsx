@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const ADMIN_PASSWORD = 'kapital2025'
+const ADMIN_PASSWORD = 'portfolio2026'
 
 function Toast({ message, onHide }) {
   useEffect(() => {

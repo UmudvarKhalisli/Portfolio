@@ -15,7 +15,7 @@ Brauzerdə `http://localhost:5173` ünvanını açın.
 
 Saytda naviqasiya çubuğundakı **⚙** düyməsinə basın.
 
-Şifrə: `kapital2025`
+Şifrə: `portfolio2026`
 
 > **Qeyd:** Şifrəni `src/components/AdminPanel.jsx` faylında `ADMIN_PASSWORD` sabitini dəyişərək yeniləyə bilərsiniz.
 
