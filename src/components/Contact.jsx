@@ -66,7 +66,7 @@ export default function Contact({ contact }) {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gridTemplateColumns: '1fr',
           gap: isMobile ? '2rem' : '4rem',
         }}>
           <p style={{

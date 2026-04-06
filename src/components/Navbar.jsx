@@ -211,14 +211,24 @@ export default function Navbar({ name, onAdminOpen }) {
           {isMobile && (
             <button 
               onClick={() => setShowMenu(!showMenu)}
-              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+              style={{ 
+                background: 'none', 
+                border: 'none', 
+                padding: 0, 
+                cursor: 'pointer', 
+                display: 'flex', 
+                alignItems: 'center',
+                color: '#0a0a0a',
+                outline: 'none',
+                WebkitTapHighlightColor: 'transparent'
+              }}
             >
               {showMenu ? (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="1.5">
                   <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
                 </svg>
               ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="1.5">
                   <path d="M4 8h16M4 16h16" strokeLinecap="round" />
                 </svg>
               )}
