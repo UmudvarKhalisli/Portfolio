@@ -36,27 +36,6 @@ export default function About({ profile }) {
         alignItems: 'start',
       }}>
         <div>
-          {imgUrl ? (
-            <img
-              src={imgUrl}
-              alt={name}
-              style={{
-                width: 100, height: 100, borderRadius: '50%',
-                objectFit: 'cover', marginBottom: '1.5rem',
-                border: '1px solid #e0e0e0',
-              }}
-            />
-          ) : (
-            <div style={{
-              width: 100, height: 100, borderRadius: '50%',
-              background: '#f0f0f0', display: 'flex', alignItems: 'center',
-              justifyContent: 'center', marginBottom: '1.5rem',
-              fontFamily: "'EB Garamond', serif", fontSize: '1.8rem',
-              color: '#888', border: '1px solid #e0e0e0',
-            }}>
-              {initials}
-            </div>
-          )}
           <p style={{
             fontSize: '1rem', lineHeight: 1.85, color: '#444',
             fontFamily: 'DM Sans, sans-serif',
