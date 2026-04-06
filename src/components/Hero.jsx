@@ -64,7 +64,7 @@ export default function Hero({ profile }) {
         onMouseEnter={e => { e.target.style.background = '#333' }}
         onMouseLeave={e => { e.target.style.background = '#0a0a0a' }}
       >
-        Bak
+        Layihələrim
       </button>
       <button
         onClick={() => scroll('contact')}
