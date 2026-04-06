@@ -2,9 +2,13 @@
 
 Şəxsi portfolio saytı. React + Vite ilə hazırlanmışdır.
 
-## Başlamaq
+## Bu şablonu istifadə etmək üçün:
+
+Əgər bu layihəni özünüz üçün sıfırdan qurmaq istəyirsinizsə, təmiz şablon branch-ını clone edin:
 
 ```bash
+git clone -b template https://github.com/UmudvarKhalisli/Portfolio.git
+cd Portfolio
 npm install
 npm run dev
 ```
