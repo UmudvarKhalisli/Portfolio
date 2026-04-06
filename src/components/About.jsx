@@ -8,7 +8,10 @@ export default function About({ profile }) {
 
   const skillLines = (skills || '').split('\n').filter(Boolean).map(line => {
     const [skill, level] = line.split('|')
-    return { skill: skill.trim(), level: level.trim() }
+    return { 
+      skill: (skill || '').trim(), 
+      level: (level || '').trim() 
+    }
   })
 
   const initials = (name || 'AD').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2)

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, isMobile }) {
   const [hovered, setHovered] = React.useState(false)
 
   return (
@@ -105,7 +105,7 @@ export default function Projects({ projects }) {
           gap: isMobile ? '1rem' : '1.5rem',
         }}>
           {projects.map((p, i) => (
-            <ProjectCard key={i} project={p} index={i} />
+            <ProjectCard key={i} project={p} index={i} isMobile={isMobile} />
           ))}
         </div>
       )}
