@@ -31,7 +31,7 @@ export default function About({ profile }) {
 
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gridTemplateColumns: '1fr',
         gap: isMobile ? '2rem' : '4rem',
         alignItems: 'start',
       }}>
