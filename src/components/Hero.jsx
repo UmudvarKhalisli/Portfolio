@@ -103,15 +103,21 @@ export default function Hero({ profile }) {
             src={imgUrl}
             alt={name}
             style={{
-              width: isMobile ? '120px' : '300px',
-              height: isMobile ? '120px' : '300px',
-              borderRadius: 0,
+              width: isMobile ? '100px' : '260px',
+              height: isMobile ? '100px' : '260px',
+              borderRadius: isMobile ? '24px' : '48px',
               objectFit: 'cover',
               filter: 'grayscale(100%)',
-              transition: 'filter 0.3s ease',
+              transition: 'all 0.3s ease',
             }}
-            onMouseEnter={e => e.target.style.filter = 'grayscale(0%)'}
-            onMouseLeave={e => e.target.style.filter = 'grayscale(100%)'}
+            onMouseEnter={e => {
+              e.target.style.filter = 'grayscale(0%)'
+              e.target.style.transform = 'scale(1.02)'
+            }}
+            onMouseLeave={e => {
+              e.target.style.filter = 'grayscale(100%)'
+              e.target.style.transform = 'scale(1)'
+            }}
           />
         </div>
       )}
