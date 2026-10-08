@@ -85,6 +85,18 @@ const translations = {
 
 const defaultProjects = [
     {
+        id: 0,
+        title: "MILI",
+        desc: {
+            az: "MILI rəqəmsal agentliyinin sosial media, marketinq və veb həllərini təqdim edən korporativ sayt.",
+            en: "Corporate website presenting MILI digital agency's social media, marketing, and web solutions.",
+            ru: "Корпоративный сайт цифрового агентства MILI с презентацией услуг в области социальных сетей, маркетинга и веб-решений."
+        },
+        tags: ["React", "Vite", "JavaScript", "CSS"],
+        live: "https://miliaz.vercel.app/",
+        source: ""
+    },
+    {
         id: 1,
         title: "Tikinti Texnikasi",
         desc: {
@@ -107,6 +119,18 @@ const defaultProjects = [
         tags: ["PHP", "MySQL", "Cloudinary", "PWA"],
         live: "https://e-yarmarka.me",
         source: "https://github.com/UmudvarKhalisli/e-yarmarka"
+    },
+    {
+        id: 3,
+        title: "Fornitura",
+        desc: {
+            az: "Fornitura üçün hazırlanmış korporativ veb sayt və rəqəmsal təqdimat platforması.",
+            en: "Corporate website and digital presentation platform created for Fornitura.",
+            ru: "Корпоративный сайт и цифровая презентационная платформа для Fornitura."
+        },
+        tags: ["React", "Vite", "JavaScript", "CSS"],
+        live: "https://fornitura.az/",
+        source: ""
     }
 ];
 
@@ -119,7 +143,8 @@ const services = [
 const smmWorks = [
     { brand: "lookmood_nn", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları" },
     { brand: "EZ Group Təmizlik", task: "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", did: "Kontent hazırlanması, qrid dizaynı, SMM və targeting" },
-    { brand: "Farell Brooklyn", task: "Ərkək geyimi brendi üçün Instagram kontenti", did: "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması" },
+    { brand: "e-naftexnika", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", link: "https://www.instagram.com/e.naftexnika/" },
+    { brand: "Farell Brooklyn", task: "Kişigeyimi brendi üçün Instagram kontenti", did: "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması" },
     { brand: "Workforce Solutions", task: "Xaricə inşaat işçilərinin işə cəlbi", did: "Meta reklam kampaniyalarının qurulması və idarə edilməsi" }
 ];
 

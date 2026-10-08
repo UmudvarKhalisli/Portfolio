@@ -17,10 +17,23 @@ const DEFAULT_DATA = {
   "smmWorks": [
     { "brand": "lookmood_nn", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "" },
     { "brand": "EZ Group Təmizlik", "task": "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", "did": "Kontent hazırlanması, qrid dizaynı, SMM və targeting", "result": "", "link": "" },
-    { "brand": "Farell Brooklyn", "task": "Ərkək geyimi brendi üçün Instagram kontenti", "did": "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması", "result": "", "link": "" },
-    { "brand": "Workforce Solutions", "task": "Xaricə inşaat işçilərinin işə cəlbi", "did": "Meta reklam kampaniyalarının qurulması və idarə edilməsi", "result": "", "link": "" }
+    { "brand": "Farell Brooklyn", "task": "Kişigeyimi brendi üçün Instagram kontenti", "did": "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması", "result": "", "link": "" },
+    { "brand": "Workforce Solutions", "task": "Xaricə inşaat işçilərinin işə cəlbi", "did": "Meta reklam kampaniyalarının qurulması və idarə edilməsi", "result": "", "link": "" },
+    { "brand": "e-naftexnika", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "https://www.instagram.com/e.naftexnika/" }
   ],
   "projects": [
+    {
+      "title": "MILI",
+      "desc": "MILI rəqəmsal agentliyinin sosial media, marketinq və veb həllərini təqdim edən korporativ sayt.",
+      "tags": [
+        "React",
+        "Vite",
+        "JavaScript",
+        "CSS"
+      ],
+      "demo": "https://miliaz.vercel.app/",
+      "github": ""
+    },
     {
       "title": "eYarmarka",
       "desc": "e-Yarmarka müxtəlif mağazaları və məhsulları bir platformada birləşdirən çoxsatıcılı marketplace layihəsidir. Layihənin məqsədi istifadəçilərə fərqli satıcılardan məhsulları daha rahat tapmaq, müqayisə etmək və sifariş prosesini daha əlçatan şəkildə təqdim etməkdir.",
@@ -79,6 +92,18 @@ const DEFAULT_DATA = {
       "github": "https://github.com/UmudvarKhalisli/ShitGame"
     },
     {
+      "title": "Fornitura",
+      "desc": "Fornitura üçün hazırlanmış korporativ veb sayt və rəqəmsal təqdimat platforması.",
+      "tags": [
+        "React",
+        "Vite",
+        "JavaScript",
+        "CSS"
+      ],
+      "demo": "https://fornitura.az/",
+      "github": ""
+    },
+    {
       "title": "NAF-company",
       "desc": "NAF tikinti texnikasının icarəsi üçün hazırlanmış modern və dinamik veb platformadır. Layihə estetik monoxrom dizayn, real-time məlumat idarəetməsi və tam funksional admin panel ilə texnikaların, sifarişlərin və məzmunun rahat idarə olunmasına fokuslanır.",
       "tags": [
@@ -92,20 +117,6 @@ const DEFAULT_DATA = {
       "demo": "https://naf-company.vercel.app/",
       "github": "https://github.com/UmudvarKhalisli/NAF"
     },
-    {
-      "title": "FireAZ",
-      "desc": "FireAZ yanğından qorunma sistemləri üçün hazırlanmış korporativ veb platformadır. Sayt məhsul kataloqu, xidmət bölmələri, tamamlanmış layihələr, texniki bloq və əlaqə axını ilə şirkətin həm satış, həm də təqdimat tərəfini birləşdirir. Platforma əsasən yanğın siqnalizasiya, sprinkler, qaz söndürmə, nasos sistemləri və texniki dəstək xidmətlərini təqdim etməyə fokuslanır.",
-      "tags": [
-        "Corporate Website",
-        "Product Catalog",
-        "Portfolio",
-        "Blog",
-        "Contact Form",
-        "Vercel."
-      ],
-      "demo": "https://firesite.vercel.app/",
-      "github": "https://github.com/UmudvarKhalisli/FSFS"
-    }
   ],
   "contact": {
     "email": "umudvarkhalisli@gmail.com",
@@ -118,7 +129,7 @@ const DEFAULT_DATA = {
   }
 }
 
-const STORAGE_KEY = 'portfolio_data_v2'
+const STORAGE_KEY = 'portfolio_data_v3'
 
 export function useData() {
   const [data, setData] = useState(() => {
