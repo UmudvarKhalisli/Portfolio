@@ -15,16 +15,16 @@ const DEFAULT_DATA = {
     { "title": "Veb development", "desc": "Korporativ saytlar, kataloqlar və platformaların dizayndan yayıma qədər hazırlanması." }
   ],
   "smmWorks": [
-    { "brand": "lookmood_nn", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "" },
+    { "brand": "Lookmood_NN", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "" },
     { "brand": "EZ Group Təmizlik", "task": "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", "did": "Kontent hazırlanması, qrid dizaynı, SMM və targeting", "result": "", "link": "" },
     { "brand": "Farell Brooklyn", "task": "Kişigeyimi brendi üçün Instagram kontenti", "did": "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması", "result": "", "link": "" },
     { "brand": "Workforce Solutions", "task": "Xaricə inşaat işçilərinin işə cəlbi", "did": "Meta reklam kampaniyalarının qurulması və idarə edilməsi", "result": "", "link": "" },
-    { "brand": "naftexnika.az", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "https://www.instagram.com/e.naftexnika/" }
+    { "brand": "Naftexnika.az", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "" }
   ],
   "projects": [
     {
       "title": "MILI",
-      "desc": "MILI rəqəmsal agentliyinin sosial media, marketinq və veb həllərini təqdim edən korporativ sayt.",
+      "desc": "MILI rəqəmsal agentliyinin sosial media idarəçiliyi, marketinq strategiyası, targeting reklamları və veb development xidmətlərini təqdim edən korporativ sayt. Sayt agentliyin brendlər üçün yaratdığı rəqəmsal həlləri, xidmət istiqamətlərini və iş yanaşmasını vahid platformada nümayiş etdirir.",
       "tags": [
         "React",
         "Vite",
@@ -93,7 +93,7 @@ const DEFAULT_DATA = {
     },
     {
       "title": "Fornitura",
-      "desc": "Fornitura üçün hazırlanmış korporativ veb sayt və rəqəmsal təqdimat platforması.",
+      "desc": "Fornitura üçün hazırlanmış korporativ veb sayt və rəqəmsal təqdimat platforması. Sayt şirkətin fəaliyyət istiqamətlərini, xidmətlərini və əsas üstünlüklərini müasir, strukturlaşdırılmış və istifadəçi üçün rahat formatda təqdim edir.",
       "tags": [
         "React",
         "Vite",
@@ -122,7 +122,7 @@ const DEFAULT_DATA = {
     "email": "umudvarkhalisli@gmail.com",
     "linkedin": "https://www.linkedin.com/in/umudvar-khalisli/",
     "github": "https://github.com/UmudvarKhalisli",
-    "instagram": "https://www.instagram.com/mili.consulting/",
+    "instagram": "https://www.instagram.com/miliagency.az/",
     "cv": "https://pdftolink.io/file/r2_dXNlcnMvZ3Vlc3QvNDJhYzQxMGMtMjA3My00YzQ5LWI5NjEtZDY1NTZmNWNmNmIzLnBkZg",
     "text": "Yeni əməkdaşlıqlar, layihələr və peşəkar imkanlarla bağlı mənimlə əlaqə saxlaya bilərsiniz.\n",
     "whatsapp": "+994514002230"

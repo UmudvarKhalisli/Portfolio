@@ -88,7 +88,7 @@ const defaultProjects = [
         id: 0,
         title: "MILI",
         desc: {
-            az: "MILI rəqəmsal agentliyinin sosial media, marketinq və veb həllərini təqdim edən korporativ sayt.",
+            az: "MILI rəqəmsal agentliyinin sosial media idarəçiliyi, marketinq strategiyası, targeting reklamları və veb development xidmətlərini təqdim edən korporativ sayt. Sayt agentliyin brendlər üçün yaratdığı rəqəmsal həlləri, xidmət istiqamətlərini və iş yanaşmasını vahid platformada nümayiş etdirir.",
             en: "Corporate website presenting MILI digital agency's social media, marketing, and web solutions.",
             ru: "Корпоративный сайт цифрового агентства MILI с презентацией услуг в области социальных сетей, маркетинга и веб-решений."
         },
@@ -124,7 +124,7 @@ const defaultProjects = [
         id: 3,
         title: "Fornitura",
         desc: {
-            az: "Fornitura üçün hazırlanmış korporativ veb sayt və rəqəmsal təqdimat platforması.",
+            az: "Fornitura üçün hazırlanmış korporativ veb sayt və rəqəmsal təqdimat platforması. Sayt şirkətin fəaliyyət istiqamətlərini, xidmətlərini və əsas üstünlüklərini müasir, strukturlaşdırılmış və istifadəçi üçün rahat formatda təqdim edir.",
             en: "Corporate website and digital presentation platform created for Fornitura.",
             ru: "Корпоративный сайт и цифровая презентационная платформа для Fornitura."
         },
@@ -141,9 +141,9 @@ const services = [
 ];
 
 const smmWorks = [
-    { brand: "lookmood_nn", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları" },
+    { brand: "Lookmood_NN", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları" },
     { brand: "EZ Group Təmizlik", task: "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", did: "Kontent hazırlanması, qrid dizaynı, SMM və targeting" },
-    { brand: "naftexnika.az", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", link: "https://www.instagram.com/e.naftexnika/" },
+    { brand: "Naftexnika.az", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları" },
     { brand: "Farell Brooklyn", task: "Kişigeyimi brendi üçün Instagram kontenti", did: "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması" },
     { brand: "Workforce Solutions", task: "Xaricə inşaat işçilərinin işə cəlbi", did: "Meta reklam kampaniyalarının qurulması və idarə edilməsi" }
 ];
@@ -157,7 +157,7 @@ let cvBlobUrl = null;
 let contacts = JSON.parse(localStorage.getItem('contacts')) || {
     email: 'your@email.com',
     whatsapp: '994500000000',
-    instagram: 'https://www.instagram.com/mili.consulting/',
+    instagram: 'https://www.instagram.com/miliagency.az/',
     github: 'https://github.com/UmudvarKhalisli',
     linkedin: 'https://linkedin.com/in/umudvar-khalisli'
 };
