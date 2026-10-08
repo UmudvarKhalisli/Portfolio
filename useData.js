@@ -68,7 +68,7 @@ const DEFAULT_DATA = {
       "github": "https://github.com/UmudvarKhalisli/ShitGame"
     },
     {
-      "title": "NAF-company",
+      "title": "NAF Texnika",
       "desc": "NAF tikinti texnikasının icarəsi üçün hazırlanmış modern və dinamik veb platformadır. Layihə estetik monoxrom dizayn, real-time məlumat idarəetməsi və tam funksional admin panel ilə texnikaların, sifarişlərin və məzmunun rahat idarə olunmasına fokuslanır.",
       "tags": [
         "Next.js",
@@ -78,7 +78,7 @@ const DEFAULT_DATA = {
         "Supabase",
         "TypeScript"
       ],
-      "demo": "https://naf-company.vercel.app/",
+      "demo": "https://NAF Texnika.vercel.app/",
       "github": "https://github.com/UmudvarKhalisli/NAF"
     },
     {

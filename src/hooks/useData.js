@@ -19,7 +19,7 @@ const DEFAULT_DATA = {
     { "brand": "EZ Group Təmizlik", "task": "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", "did": "Kontent hazırlanması, qrid dizaynı, SMM və targeting", "result": "", "link": "" },
     { "brand": "Farell Brooklyn", "task": "Kişigeyimi brendi üçün Instagram kontenti", "did": "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması", "result": "", "link": "" },
     { "brand": "Workforce Solutions", "task": "Xaricə inşaat işçilərinin işə cəlbi", "did": "Meta reklam kampaniyalarının qurulması və idarə edilməsi", "result": "", "link": "" },
-    { "brand": "e-naftexnika", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "https://www.instagram.com/e.naftexnika/" }
+    { "brand": "naftexnika.az", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "https://www.instagram.com/e.naftexnika/" }
   ],
   "projects": [
     {
@@ -104,7 +104,7 @@ const DEFAULT_DATA = {
       "github": ""
     },
     {
-      "title": "NAF-company",
+      "title": "NAF Texnika",
       "desc": "NAF tikinti texnikasının icarəsi üçün hazırlanmış modern və dinamik veb platformadır. Layihə estetik monoxrom dizayn, real-time məlumat idarəetməsi və tam funksional admin panel ilə texnikaların, sifarişlərin və məzmunun rahat idarə olunmasına fokuslanır.",
       "tags": [
         "Next.js",
@@ -114,7 +114,7 @@ const DEFAULT_DATA = {
         "Supabase",
         "TypeScript"
       ],
-      "demo": "https://naf-company.vercel.app/",
+      "demo": "https://NAF Texnika.vercel.app/",
       "github": "https://github.com/UmudvarKhalisli/NAF"
     },
   ],

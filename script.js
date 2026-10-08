@@ -143,7 +143,7 @@ const services = [
 const smmWorks = [
     { brand: "lookmood_nn", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları" },
     { brand: "EZ Group Təmizlik", task: "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", did: "Kontent hazırlanması, qrid dizaynı, SMM və targeting" },
-    { brand: "e-naftexnika", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", link: "https://www.instagram.com/e.naftexnika/" },
+    { brand: "naftexnika.az", task: "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", did: "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", link: "https://www.instagram.com/e.naftexnika/" },
     { brand: "Farell Brooklyn", task: "Kişigeyimi brendi üçün Instagram kontenti", did: "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması" },
     { brand: "Workforce Solutions", task: "Xaricə inşaat işçilərinin işə cəlbi", did: "Meta reklam kampaniyalarının qurulması və idarə edilməsi" }
 ];
