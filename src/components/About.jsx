@@ -54,11 +54,12 @@ export default function About({ profile }) {
           <ul style={{ listStyle: 'none' }}>
             {skillLines.map((s, i) => (
               <li key={i} style={{
-                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                display: 'flex', flexDirection: 'column', gap: '0.25rem',
                 padding: '0.75rem 0', borderBottom: '1px solid #e0e0e0',
-                fontSize: '0.9rem', fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'DM Sans, sans-serif',
               }}>
-                <span>{s.skill}</span>
+                <strong style={{ fontSize: '0.9rem', color: '#0a0a0a' }}>{s.skill}</strong>
+                {s.level && <span style={{ fontSize: '0.82rem', color: '#888' }}>{s.level}</span>}
               </li>
             ))}
           </ul>

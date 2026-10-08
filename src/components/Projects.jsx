@@ -91,7 +91,7 @@ export default function Projects({ projects }) {
         fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase',
         color: '#888', marginBottom: isMobile ? '1.5rem' : '3rem',
       }}>
-        — Layihələr
+        — Veb layihələr
       </div>
 
       {projects.length === 0 ? (

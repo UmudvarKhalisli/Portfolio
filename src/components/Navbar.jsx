@@ -159,7 +159,7 @@ export default function Navbar({ name, onAdminOpen }) {
 
   const linksStyle = {
     ...styles.links,
-    gap: isMobile ? '1rem' : '2rem',
+    gap: isMobile ? '1rem' : '1.5rem',
   }
 
   const logoStyle = {
@@ -196,7 +196,9 @@ export default function Navbar({ name, onAdminOpen }) {
           {!isMobile && (
             <>
               <button style={styles.link} onClick={() => scroll('about')}>Haqqımda</button>
-              <button style={styles.link} onClick={() => scroll('projects')}>Layihələr</button>
+              <button style={styles.link} onClick={() => scroll('services')}>Xidmətlər</button>
+              <button style={styles.link} onClick={() => scroll('smm')}>SMM işlərim</button>
+              <button style={styles.link} onClick={() => scroll('projects')}>Veb layihələr</button>
               <button style={styles.link} onClick={() => scroll('contact')}>Əlaqə</button>
             </>
           )}
@@ -240,7 +242,9 @@ export default function Navbar({ name, onAdminOpen }) {
       {isMobile && (
         <div style={mobileMenuStyle}>
           <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('about')}>Haqqımda</button>
-          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('projects')}>Layihələr</button>
+          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('services')}>Xidmətlər</button>
+          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('smm')}>SMM işlərim</button>
+          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('projects')}>Veb layihələr</button>
           <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('contact')}>Əlaqə</button>
         </div>
       )}

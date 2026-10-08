@@ -3,6 +3,8 @@ import { useData } from './hooks/useData'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Services from './components/Services'
+import SmmWorks from './components/SmmWorks'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import AdminPanel from './components/AdminPanel'
@@ -19,6 +21,10 @@ export default function App() {
         <Hero profile={data.profile} />
         <hr style={{ border: 'none', borderTop: '1px solid #e0e0e0', margin: 0 }} />
         <About profile={data.profile} />
+        <hr style={{ border: 'none', borderTop: '1px solid #e0e0e0', margin: 0 }} />
+        <Services services={data.services} />
+        <hr style={{ border: 'none', borderTop: '1px solid #e0e0e0', margin: 0 }} />
+        <SmmWorks works={data.smmWorks} />
         <hr style={{ border: 'none', borderTop: '1px solid #e0e0e0', margin: 0 }} />
         <Projects projects={data.projects} />
         <hr style={{ border: 'none', borderTop: '1px solid #e0e0e0', margin: 0 }} />

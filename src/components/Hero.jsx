@@ -15,7 +15,7 @@ export default function Hero({ profile }) {
       fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase',
       color: '#888', fontFamily: 'DM Sans, sans-serif', marginBottom: '1rem'
     }}>
-      {role || 'Frontend Developer'}
+      {role || 'SMM & Marketinq'}
     </div>
   )
 
@@ -49,7 +49,7 @@ export default function Hero({ profile }) {
   const actionButtons = (
     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
       <button
-        onClick={() => scroll('projects')}
+        onClick={() => scroll('smm')}
         style={{
           padding: '0.75rem 2rem',
           border: '1px solid #0a0a0a',
@@ -64,7 +64,7 @@ export default function Hero({ profile }) {
         onMouseEnter={e => { e.target.style.background = '#333' }}
         onMouseLeave={e => { e.target.style.background = '#0a0a0a' }}
       >
-        Layihələrim
+        İşlərim
       </button>
       <button
         onClick={() => scroll('contact')}

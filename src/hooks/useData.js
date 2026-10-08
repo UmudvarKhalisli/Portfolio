@@ -3,12 +3,23 @@ import { useState } from 'react'
 const DEFAULT_DATA = {
   "profile": {
     "name": "Ümüdvar Xalisli",
-    "role": "Full-Stack Developer ",
-    "bio": "İstifadə rahatlığı, inkişaf və icraya fokuslanaraq real platformalar, marketplace sistemləri və rəqəmsal alətlər yaradan developer və məhsul qurucusu.",
-    "about": "Mən web development sahəsində çalışan və müasir, funksional rəqəmsal məhsullar hazırlamağa fokuslanan bir developerəm. HTML, CSS, JavaScript, PHP, SQL/MySQL, React və Next.js ilə işləyir, təmiz kod strukturu, məntiqli sistem quruluşu və rahat istifadəçi təcrübəsinə önəm verirəm. Həmçinin, süni intellekt (AI) alətləri ilə effektiv işləmə, prompt engineering və iş axınlarını AI vasitəsilə optimallaşdırma bacarıqlarına malikəm. Məqsədim yalnız işləyən layihələr yaratmaq deyil, eyni zamanda inkişaf etdirilə bilən, praktik və peşəkar həllər qurmaqdır.",
-    "skills": "HTML, CSS, JavaScript, \nPHP, SQL/MySQL, React, \nNext.js, Responsive Design, \nAPI Integration, Git, GitHub, \nCRUD, Database Management, \nProblem Solving, AI ilə işləmə | Yaxşı.",
+    "role": "SMM & Marketinq · MILI CEO · Developer",
+    "bio": "Brendlər üçün sosial media strategiyası, targeting reklamları və veb həllər yaradıram. MILI rəqəmsal agentliyinin təsisçisiyəm.",
+    "about": "Mən MILI rəqəmsal agentliyinin təsisçisi və SMM/marketinq mütəxəssisiyəm. Brendlər üçün kontent strategiyası, vizual konsepsiya və Meta/Google reklam kampaniyaları qururam. Developer təcrübəm sayəsində reklamdan sayta qədər bütün prosesi bir əldə idarə edə bilirəm.",
+    "skills": "SMM və kontent|Kontent planı, brend tonu, trend təhlili, vizual konsepsiya\nReklam|Meta Ads, Google Ads, targeting\nVeb|HTML, CSS, JavaScript, React, Next.js, TypeScript, SQL\nAlətlər|AI alətləri, UX/UI, Git, GitHub",
     "imgUrl": "https://image2url.com/r2/default/images/1775394886525-c3e9696c-3821-4486-a179-db6c1f94f459.jpg"
   },
+  "services": [
+    { "title": "SMM", "desc": "Brend tonuna uyğun kontent strategiyası, kontent planı, qrid dizaynı, caption yazılması və hesabın idarə olunması." },
+    { "title": "Targeting və reklam", "desc": "Meta və Google Ads platformalarında kampaniyaların qurulması, auditoriya seçimi və idarə edilməsi." },
+    { "title": "Veb development", "desc": "Korporativ saytlar, kataloqlar və platformaların dizayndan yayıma qədər hazırlanması." }
+  ],
+  "smmWorks": [
+    { "brand": "lookmood_nn", "task": "Instagram hesabının SMM, marketinq və targeting idarəçiliyi", "did": "Kontent və vizual üslub, SMM idarəçiliyi, targeting reklamları", "result": "", "link": "" },
+    { "brand": "EZ Group Təmizlik", "task": "Təmizlik və təmir xidməti brendi üçün Instagram hesabı", "did": "Kontent hazırlanması, qrid dizaynı, SMM və targeting", "result": "", "link": "" },
+    { "brand": "Farell Brooklyn", "task": "Ərkək geyimi brendi üçün Instagram kontenti", "did": "Kontent ideyaları, vizual konsepsiya, AI ilə vizual hazırlanması", "result": "", "link": "" },
+    { "brand": "Workforce Solutions", "task": "Xaricə inşaat işçilərinin işə cəlbi", "did": "Meta reklam kampaniyalarının qurulması və idarə edilməsi", "result": "", "link": "" }
+  ],
   "projects": [
     {
       "title": "eYarmarka",
@@ -100,13 +111,14 @@ const DEFAULT_DATA = {
     "email": "umudvarkhalisli@gmail.com",
     "linkedin": "https://www.linkedin.com/in/umudvar-khalisli/",
     "github": "https://github.com/UmudvarKhalisli",
+    "instagram": "https://www.instagram.com/mili.consulting/",
     "cv": "https://pdftolink.io/file/r2_dXNlcnMvZ3Vlc3QvNDJhYzQxMGMtMjA3My00YzQ5LWI5NjEtZDY1NTZmNWNmNmIzLnBkZg",
     "text": "Yeni əməkdaşlıqlar, layihələr və peşəkar imkanlarla bağlı mənimlə əlaqə saxlaya bilərsiniz.\n",
     "whatsapp": "+994514002230"
   }
 }
 
-const STORAGE_KEY = 'portfolio_data_v1'
+const STORAGE_KEY = 'portfolio_data_v2'
 
 export function useData() {
   const [data, setData] = useState(() => {
