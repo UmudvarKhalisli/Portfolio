@@ -78,7 +78,7 @@ const DEFAULT_DATA = {
         "Supabase",
         "TypeScript"
       ],
-      "demo": "https://NAF Texnika.vercel.app/",
+      "demo": "https://naftexnika.az/",
       "github": "https://github.com/UmudvarKhalisli/NAF"
     },
     {
