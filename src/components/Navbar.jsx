@@ -152,6 +152,11 @@ export default function Navbar({ name, onAdminOpen }) {
     setShowMenu(false)
   }
 
+  const navLinkHover = {
+    onMouseEnter: e => { e.currentTarget.style.color = '#0a0a0a' },
+    onMouseLeave: e => { e.currentTarget.style.color = '#888' },
+  }
+
   const navStyle = {
     ...styles.nav,
     padding: isMobile ? '1rem 1.25rem' : '1.25rem 2.5rem',
@@ -195,11 +200,11 @@ export default function Navbar({ name, onAdminOpen }) {
         <div style={linksStyle}>
           {!isMobile && (
             <>
-              <button style={styles.link} onClick={() => scroll('about')}>Haqqımda</button>
-              <button style={styles.link} onClick={() => scroll('services')}>Xidmətlər</button>
-              <button style={styles.link} onClick={() => scroll('smm')}>SMM işlərim</button>
-              <button style={styles.link} onClick={() => scroll('projects')}>Veb layihələr</button>
-              <button style={styles.link} onClick={() => scroll('contact')}>Əlaqə</button>
+              <button {...navLinkHover} style={styles.link} onClick={() => scroll('about')}>Haqqımda</button>
+              <button {...navLinkHover} style={styles.link} onClick={() => scroll('services')}>Xidmətlər</button>
+              <button {...navLinkHover} style={styles.link} onClick={() => scroll('smm')}>SMM işlərim</button>
+              <button {...navLinkHover} style={styles.link} onClick={() => scroll('projects')}>Veb layihələr</button>
+              <button {...navLinkHover} style={styles.link} onClick={() => scroll('contact')}>Əlaqə</button>
             </>
           )}
           <button 
@@ -241,11 +246,11 @@ export default function Navbar({ name, onAdminOpen }) {
 
       {isMobile && (
         <div style={mobileMenuStyle}>
-          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('about')}>Haqqımda</button>
-          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('services')}>Xidmətlər</button>
-          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('smm')}>SMM işlərim</button>
-          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('projects')}>Veb layihələr</button>
-          <button style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('contact')}>Əlaqə</button>
+          <button {...navLinkHover} style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('about')}>Haqqımda</button>
+          <button {...navLinkHover} style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('services')}>Xidmətlər</button>
+          <button {...navLinkHover} style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('smm')}>SMM işlərim</button>
+          <button {...navLinkHover} style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('projects')}>Veb layihələr</button>
+          <button {...navLinkHover} style={{ ...styles.link, textAlign: 'left', fontSize: '0.9rem' }} onClick={() => scroll('contact')}>Əlaqə</button>
         </div>
       )}
 
