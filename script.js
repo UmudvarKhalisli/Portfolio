@@ -248,7 +248,7 @@ function renderContacts() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01"/>
             </svg>
-            <a href="${contacts.instagram || 'https://www.instagram.com/mili.consulting/'}" target="_blank">Instagram</a>
+            <a href="${contacts.instagram || 'https://www.instagram.com/miliagency.az/'}" target="_blank">Instagram</a>
         </div>
         <div class="contact-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
