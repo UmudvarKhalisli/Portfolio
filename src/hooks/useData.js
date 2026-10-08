@@ -123,7 +123,7 @@ const DEFAULT_DATA = {
     "linkedin": "https://www.linkedin.com/in/umudvar-khalisli/",
     "github": "https://github.com/UmudvarKhalisli",
     "instagram": "https://www.instagram.com/miliagency.az/",
-    "cv": "https://pdftolink.io/file/r2_dXNlcnMvZ3Vlc3QvNDJhYzQxMGMtMjA3My00YzQ5LWI5NjEtZDY1NTZmNWNmNmIzLnBkZg",
+    "cv": "/cv.pdf",
     "text": "Yeni əməkdaşlıqlar, layihələr və peşəkar imkanlarla bağlı mənimlə əlaqə saxlaya bilərsiniz.\n",
     "whatsapp": "+994514002230"
   }
